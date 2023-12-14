@@ -30,10 +30,10 @@ class HabitServiceTest {
     @Test
     void getAllHabits() {
         when(repository.findAll()).thenReturn(List.of(
-                new Habit(1L, "Eat healthy food", 25, 1L),
-                new Habit(2L, "Read book", 100, 2L),
-                new Habit(3L, "Go to the gym", 28, 3L),
-                new Habit(4L, "Learn English", 39, 4L)
+                new Habit( 1L,"Eat healthy food", 25, 1L),
+                new Habit( 2L,"Read book", 100, 2L),
+                new Habit( 3L,"Go to the gym", 28, 3L),
+                new Habit( 4L,"Learn English", 39, 4L)
         ));
 
         assertThat(habitService.getAllHabits()).isNotNull();

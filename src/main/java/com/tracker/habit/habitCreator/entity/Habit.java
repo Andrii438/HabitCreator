@@ -1,14 +1,18 @@
 package com.tracker.habit.habitCreator.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.dialect.function.AggregateWindowEmulationQueryTransformer;
 
 import java.util.Objects;
+
+import static jakarta.persistence.GenerationType.IDENTITY;
+import static jakarta.persistence.GenerationType.SEQUENCE;
 
 @Entity(name = "habits")
 public class Habit {
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy=IDENTITY)
     private Long id;
     @Column(name = "name")
     private String name;
@@ -21,7 +25,7 @@ public class Habit {
     }
 
     public Habit(Long id, String name, int dayDuration, Long ownerId) {
-        this.id = id;
+        this.id=id;
         this.name = name;
         this.dayDuration = dayDuration;
         this.ownerId = ownerId;
@@ -42,6 +46,8 @@ public class Habit {
     public Long getOwnerId() {
         return ownerId;
     }
+
+
 
     @Override
     public boolean equals(Object o) {

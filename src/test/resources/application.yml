@@ -1,0 +1,6 @@
+sql:
+  init:
+    mode: always
+spring:
+  datasource:
+    url: jdbc:tc:postgresql:14.4:///

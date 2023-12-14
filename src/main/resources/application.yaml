@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    config:
+      name: habitCreator
+  config:
+    import: "optional:configserver:"
+  datasource:
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/habit_creator
+server:
+  port: 8081
+

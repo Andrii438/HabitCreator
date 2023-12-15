@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface HabitService {
     List<HabitRecord> getAllHabits();
+
+    Long saveHabit(HabitRecord habitRecord);
 }
